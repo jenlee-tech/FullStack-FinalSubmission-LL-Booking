@@ -19,9 +19,7 @@
               id="first_name"
             />
           </p>
-          <p>
-            <!-- Step 9: Part one -->
-          </p>
+          <p></p>
           <label for="reservation_date">Reservation date:</label>
           <input type="date" name="reservation_date" id="reservation_date" />
           <p>
@@ -55,8 +53,6 @@
   console.log(document.getElementById('reservation_date').value);
   getBookings();
 
-  /*  Step 10: Part two */
-
   document
     .getElementById('reservation_date')
     .addEventListener('change', function () {
@@ -73,8 +69,6 @@
       .then((data) => {
         reserved_slots = [];
         bookings = '';
-
-        /* Step 11: Part three */
         for (item of data) {
           console.log(item.fields);
           reserved_slots.push(item.fields.reservation_slot);
@@ -84,7 +78,6 @@
           )}</p>`;
         }
 
-        /* Step 12: Part four  */
         let slot_options = '<option value=0 disabled>Select time</option>';
         for (let i = 11; i < 20; i++) {
           const label = formatTime(i);
@@ -94,6 +87,7 @@
             slot_options += `<option value=${i}>${label}</option>`;
           }
         }
+
         document.getElementById('reservation_slot').innerHTML = slot_options;
         if (bookings == '') {
           bookings = 'No bookings';
