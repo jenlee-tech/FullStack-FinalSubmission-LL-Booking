@@ -1,19 +1,14 @@
 {
     "version": 2,
     "builds": [{
-        "src": "littlelemon/wsgi.py",
+        "src": "manage.py",
         "use": "@vercel/python",
         "config": {
-            "maxLamdaSize": "15mb",
-            "runtime": "python3.9",
-            "includeFiles": ["staticfiles/**", "static/**'"]
+            "maxLambdaSize": "15mb",
+            "includeFiles": ["staticfiles/**"]
         }
     }],
     "routes": [{
-            "src": "/(.*)",
-            "dest": "littlelemon/wsgi.py"
-        },
-        {
             "src": "/static/(.*)",
             "dest": "/staticfiles/$1"
         },
