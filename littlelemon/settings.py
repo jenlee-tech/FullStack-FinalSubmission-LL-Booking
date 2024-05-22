@@ -128,9 +128,9 @@ USE_TZ = True
 # The settings for static files have been updated for the Graded assessment
 STATIC_URL = 'restaurant/static/'
 
-STATICFILES_DIRS = os.path.join(BASE_DIR, "restaurant/static")
+STATICFILES_DIRS = os.path.join(BASE_DIR, "static")
 
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build", "restaurant/static")
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build", "static")
 
 
 # Default primary key field type
