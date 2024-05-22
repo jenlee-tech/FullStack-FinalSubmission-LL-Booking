@@ -14,7 +14,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "manage.py"
+            "dest": "littlelemon/wsgi.py"
         }
     ]
 }
