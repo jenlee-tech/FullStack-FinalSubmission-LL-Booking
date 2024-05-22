@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-r-%0eqcja86asp_+*1@3d6t9wm65$7^p*v^m961p@)w7*3ob0n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1']
+ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', '.now.sh', 'localhost']
 
 
 # Application definition
@@ -127,11 +128,9 @@ USE_TZ = True
 # The settings for static files have been updated for the Graded assessment
 STATIC_URL = 'restaurant/static/'
 
-STATICFILES_DIRS = [
-    "restaurant/static",
-]
+STATICFILES_DIRS = os.path.join(BASE_DIR, "restaurant/static")
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build", "restaurant/static")
 
 
 # Default primary key field type
