@@ -16,7 +16,12 @@
         }
     ],
     "routes": [{
-        "src": "/(.*)",
-        "dest": "littlelemon/wsgi.py"
-    }]
+            "src": "/(.*)",
+            "dest": "littlelemon/wsgi.py"
+        },
+        {
+            "src": "/static/(.*)",
+            "dest": "/static/$1"
+        }
+    ]
 }
