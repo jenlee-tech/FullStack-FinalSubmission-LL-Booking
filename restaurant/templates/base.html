@@ -14,13 +14,11 @@
     />
 
     <!-- Load favicon -->
-    {% comment %}
     <link
       rel="shortcut icon"
       type="image/png"
       href="{% static 'img/favicon.ico' %}"
     />
-    {% endcomment %}
 
     <!-- Include your CSS files here -->
     <link
@@ -45,7 +43,7 @@
     <main>{% block content %} {% endblock %}</main>
 
     <!--Footer content-->
-    {% include 'partials/_footer.html' %}
+    {% include 'partials/_footer.html' %} 
     <!-- Replace this comment with your code  -->
   </body>
 </html>
