@@ -5,17 +5,17 @@
 # Install dependencies
 
 echo "Installing project dependencies..."
-python -m pip install -r requirements.txt
+python3.9 -m pip install -r requirements.txt
 
 # Make migrations
 
 #Install whitenoise
 echo "Installing white noise..."
-python manage.py whitenoise
+python3.9 manage.py whitenoise
 
 # Collect staticfiles
 echo "Collect static..."
-python manage.py collectstatic --noinput --clear
+python3.9 manage.py collectstatic --noinput --clear
 
 echo "Build process completed!"```
 
