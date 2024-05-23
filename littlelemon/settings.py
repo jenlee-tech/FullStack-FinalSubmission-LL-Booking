@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-r-%0eqcja86asp_+*1@3d6t9wm65$7^p*v^m961p@)w7*3ob0n
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', 'localhost', '.now.sh']
 
 
 # Application definition
@@ -146,11 +146,12 @@ MEDIA_URL = '/media/'
 
 if DEBUG:
 
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'restaurant/static')]
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 else:
 
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATIC_ROOT = os.path.join(
+        BASE_DIR, 'staticfiles_build', 'static')
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
