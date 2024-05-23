@@ -142,7 +142,7 @@ MEDIA_URL = '/media/'
 #     os.path.join(BASE_DIR, 'restaurant/static'),
 # ]
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 if DEBUG:
 
@@ -151,7 +151,7 @@ if DEBUG:
 else:
 
     STATIC_ROOT = os.path.join(
-        BASE_DIR, 'staticfiles_build', 'static')
+        BASE_DIR, 'staticfiles_build', 'staticfiles')
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
